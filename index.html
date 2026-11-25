@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deep Research — MBA Trimester II speaking practice</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#f6ebdc;--mut:#b4ab9d;--acc:#c97b4a;--accink:#1d1209;--glass:rgba(255,255,255,.06);--line:rgba(255,255,255,.14);--base:#111613;--g1:rgba(120,85,45,.45);--g2:rgba(35,85,70,.40);--g3:#16232c;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--ink:#2a2118;--mut:#6d6354;--acc:#b8622f;--accink:#fff;--glass:rgba(0,0,0,.04);--line:rgba(0,0,0,.14);--base:#f6efe4;--g1:rgba(224,180,130,.55);--g2:rgba(150,200,185,.40);--g3:#efe6d6;color-scheme:light}}
+html{scroll-padding-top:env(safe-area-inset-top,0px);min-height:100%;background:var(--base)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font:400 16px/1.5 Outfit,system-ui,sans-serif;background:radial-gradient(900px 600px at 0% 0%,var(--g1),transparent 70%),radial-gradient(800px 600px at 100% 10%,var(--g2),transparent 70%),linear-gradient(180deg,var(--base) 35%,var(--g3));background-attachment:fixed}
+main{max-width:860px;margin:0 auto;padding:30px 18px 56px;text-align:center}
+h1{font:600 clamp(32px,6vw,44px)/1.1 "Playfair Display",Georgia,serif;margin:0;letter-spacing:-.01em}
+.by{color:var(--mut);margin:4px 0 26px;font-size:15px}
+.pills{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:4px;padding:5px;border:1px solid var(--line);background:var(--glass);border-radius:999px;max-width:100%}
+.pill{border:0;background:transparent;color:var(--ink);font:600 15px Outfit,system-ui,sans-serif;padding:10px 18px;border-radius:999px;cursor:pointer;opacity:.8}
+.pill:hover{opacity:1}
+.pill[aria-pressed="true"]{background:var(--acc);color:var(--accink);opacity:1;box-shadow:0 6px 22px rgba(201,123,74,.35)}
+.desc{color:var(--mut);max-width:430px;margin:14px auto 0;font-size:15px}
+.stage{margin:clamp(30px,8vh,64px) auto 0;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.eye{color:var(--acc);font:600 13px Outfit,sans-serif;letter-spacing:.22em;text-transform:uppercase;margin:0 0 14px}
+.topic{font-family:"Playfair Display",Georgia,serif;font-weight:500;letter-spacing:-.03em;line-height:1.02;margin:0;max-width:100%;text-wrap:balance}
+.xl{font-size:clamp(44px,10vw,92px)}.lg{font-size:clamp(34px,7vw,60px)}.md{font-size:clamp(28px,5.5vw,44px)}.sm{font-size:clamp(22px,4vw,30px)}
+.reel{opacity:.5}
+.where{color:var(--mut);font-size:15px;margin:16px 0 0}
+.acts{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:34px}
+.btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:600 16px Outfit,system-ui,sans-serif;padding:15px 30px;border-radius:999px;cursor:pointer}
+.btn.pri{background:var(--acc);color:var(--accink);border-color:transparent;box-shadow:0 8px 26px rgba(201,123,74,.35)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.gear{width:52px;height:52px;padding:0;font-size:20px;display:grid;place-items:center}
+.clock{font:500 clamp(64px,16vw,128px)/1 "Playfair Display",Georgia,serif;letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin:2px 0 10px}
+.bar{width:min(420px,80%);height:5px;border-radius:3px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:100%;background:var(--acc)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:22px 0 4px;max-width:640px}
+.chips label{display:flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid var(--line);background:var(--glass);border-radius:999px;font-size:15px;cursor:pointer}
+.chips input{accent-color:var(--acc)}
+.chips input:checked+span{text-decoration:line-through;opacity:.6}
+.lbl{color:var(--mut);font-size:13px;margin:20px 0 0}
+textarea{width:min(640px,100%);min-height:110px;margin-top:10px;background:var(--glass);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:14px 16px;font:400 15px/1.5 Outfit,system-ui,sans-serif;resize:vertical}
+textarea::placeholder{color:var(--mut)}
+.set{display:none;margin:30px auto 0;max-width:520px;padding:18px;border:1px solid var(--line);background:var(--glass);border-radius:20px}
+.set.on{display:block}
+.set p{margin:12px 0 8px;color:var(--mut);font-size:14px}.set p:first-child{margin-top:0}
+.set .pills{background:transparent}
+.hint{color:var(--mut);font-size:13px;margin-top:40px}
+button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<h1>Deep Research</h1>
+<p class="by">MBA · Trimester II · AMM, MHR, FM, BAAI, OM</p>
+<div class="pills" id="subj" role="group" aria-label="Subject"></div>
+<p class="desc">Spin a topic, set a research timer, then start the speech timer whenever you’re ready.</p>
+<section class="stage" id="stage" aria-live="polite"></section>
+<section class="set" id="set" aria-label="Timer settings"><p>Research timer</p><div class="pills" id="rs"></div><p>Speech timer</p><div class="pills" id="ss"></div></section>
+<p class="hint">Press Space to spin or move to the next step. Topics come only from your five course plans. Notes aren’t saved.</p>
+</main>
+<script>
+var S={
+AMM:{n:"Advanced Marketing Mgmt",u:[
+["Unit I · Strategic marketing & competitive advantage",["Why is attention the scarcest resource in marketing today?|Attention economy; Wu’s Attention Merchants; insight-driven strategy","Explain the 4 Vs and how they shape a brand’s marketing intelligence.|Volume, variety, velocity, veracity; one real brand","What does the Herfindahl Index say about market concentration?|Sum of squared shares; monopoly vs competition; relative market share","How would you judge a campaign using Lift and ROMI?|Lift; ROMI formula; limits of each"]],
+["Unit II · Consumer insights",["Seven principles of herd marketing: why do consumers copy each other?|Earls’ Herd; social conditions over persuasion; examples","How does social listening capture the voice of the customer?|Tools; sentiment themes; monthly KPIs","Is NPS enough to measure brand health?|Willingness to recommend; promoters vs detractors; limits","Dweck’s growth and fixed mindsets: what do they mean for consumers?|Support vs star mindset; profiles; marketing use"]],
+["Unit III · Consumer mindsets & pricing",["Margin vs mark-up: why do managers confuse them?|Formulas; sensitivity; link to financial goals","Walk through a breakeven analysis for a new product launch.|Fixed cost; contribution per unit; target profit","What do price elasticity and reservation price tell a pricing manager?|Elasticity; max reservation price; willingness to buy"]],
+["Unit IV · Go-to-market strategy",["What makes a go-to-market architecture work?|Channels; partner ecosystems; sequencing; 90-day plan","SAVE vs the 4Ps: why does B2B need a different model?|Solution, Access, Value, Education","Forecast a launch using trial rate, repeat rate and cannibalization.|Trial volume; repeat volume; brand-on-brand cannibalization"]],
+["Unit V · CLV & penetration metrics",["STEPPS: what makes products and ideas contagious?|Six principles; Berger; concrete tactics","How is Customer Lifetime Value calculated and used?|Retention; margin; discount rate; CRED","Penetration share, share of requirements and heavy usage index.|Brand penetration; loyal segments; optimising presence"]]]},
+MHR:{n:"Management of Human Resources",u:[
+["Unit I · Human resource management",["Should HR have a seat at the leadership table?|HR as business partner; strategic HRM; Infosys case","Do sustainable HR practices create long-term value?|Models of HRM; HR policies; sustainability","Using HR analytics responsibly: insight vs ethics.|Attrition; absenteeism; people analytics concerns"]],
+["Unit II · Workforce planning & talent acquisition",["Can AI forecast workforce needs better than managers?|Workforce planning; forecasting; reliability","Job description vs job specification: what’s the difference?|Job analysis methods; KRAs and KPIs","How does employer branding win Gen Z talent?|EVP; culture; talent acquisition","Automation and AI in hiring: efficiency vs ethics and DEI.|ATS and RPA; bias; selection process","Why do good people leave? Retention and engagement.|Attrition crisis; engagement initiatives; job security"]],
+["Unit III · Performance management & compensation",["Why do appraisals sometimes break people?|Appraisal paradox; design flaws; modern trends","KRAs vs KPIs, and the case for real-time feedback.|Shorter goal cycles; constructive feedback","How do you build a market-competitive pay plan?|Job evaluation; pay factors; executive incentives"]],
+["Unit IV · Human resource development",["Training needs analysis: upskilling or reskilling?|TNA steps; aligning strategy and training","The ADDIE model: five steps to a training programme.|Analysis to evaluation; limits of AI design","Microlearning, gamification and AR/VR in learning.|Continuous learning; immersive tech; AI"]],
+["Unit V · Industrial relations",["From labour laws to labour codes: what changes for managers?|Trade unions; collective bargaining; participation","Handling disputes and managing gig and hybrid workers.|Grievance handling; Maruti Suzuki unrest; positive relations"]]]},
+FM:{n:"Financial Management",u:[
+["Unit I · Overview & time value of money",["The three decisions of financial management and the firm’s goal.|Investing, financing, dividend; shareholder wealth","Agency problems: managers, stockholders and bondholders.|Conflicts; governance; ethics","Why is a rupee today worth more than a rupee tomorrow?|Future and present value; timelines; discounting","Annuities, perpetuities, and quoted vs effective rates.|Annuity due; fractional periods; EAR","How does a loan amortisation schedule work?|Interest vs principal; balance; Excel"]],
+["Unit II · Cost of capital",["Cost of debt and preferred stock: pre-tax vs post-tax.|Tax shield; preferred cost","Cost of equity: CAPM or DCF?|Beta, Rf, premium; growth; flotation cost","How is WACC built, and which weights should you use?|Book, market, target weights; Domino’s case"]],
+["Unit III · Capital budgeting",["NPV, IRR and payback: which should win?|Discounted payback; conflicts; decision rules","Why do managers like MIRR?|Reinvestment assumption; comparison of techniques"]],
+["Unit IV · Capital structure, leverage & dividends",["Book, market and target capital structure.|Weights; optimal structure","Operating, financial and total leverage: a double-edged sword.|DOL, DFL, DTL; Asahi India Glass","Dividends vs capital gains: what should a firm pay out?|Policy factors; Berkshire Hathaway","Stock dividends vs share repurchases.|Effect on wealth; signalling; cash dividends"]],
+["Unit V · Working capital",["Gross vs net working capital, aggressive vs conservative financing.|Types; current asset financing policies","What does the cash conversion cycle reveal?|Inventory, collection, payables periods","Cash budgets, term loans and the real cost of trade credit.|Short-term financing; liquidity forecasting"]]]},
+BAAI:{n:"Business Analytics & AI",u:[
+["Unit I · Introduction to analytics",["Frame a business problem with 5W1H and OSEMN.|Problem framing; data workflow","Descriptive, diagnostic, predictive, prescriptive: match each to a decision.|Four analytics types; examples","Choosing the right chart: good vs bad visualisation.|Chart selection; data nature; insight"]],
+["Unit II · Supervised learning",["The machine learning process, from data to deployed model.|Supervised vs unsupervised; ML lifecycle","Logistic regression for churn prediction.|Classification; binary outcomes; interpretation","Decision tree vs K-nearest neighbour.|Employee attrition; similarity; interpretability","Simple and multiple linear regression for forecasting sales.|Coefficients; predicting numbers"]],
+["Unit III · Unsupervised learning",["K-means clustering for customer segmentation.|Choosing K; interpreting groups","Association rules and Apriori: market basket analysis.|Support, confidence, lift","Reinforcement learning in business, in plain words.|Agent, reward; examples","Accuracy, precision and recall: which metric matters?|Model evaluation; error metrics; trade-offs"]],
+["Unit IV · Foundations of AI",["The PEAS framework: design an AI agent for retail.|Performance, environment, actuators, sensors","The economics of AI: who gains and who loses?|Adoption; productivity; history","Generative AI vs agentic AI in business.|Deep learning; NLP; applications"]],
+["Unit V · Ethics & emerging trends",["Core principles of responsible AI.|Fairness; accountability; transparency","Bias in resume screening and loan approval.|Ethical dilemmas; AI risks and safety","Why do we need explainable AI?|XAI foundations; trust; governance","Global and national AI policy frameworks.|UNESCO; Turing Institute; AI in society"]]]},
+OM:{n:"Operations Management",u:[
+["Unit I · Operations strategy & location",["How do cost and flexibility trade off in operations strategy?|Strategy formulation; breakeven; sustainability","Choosing a plant location: factor rating, centre of gravity, load-distance.|Location factors; Polaris plant"]],
+["Unit II · Forecasting, capacity & layout",["Time-series forecasting: moving average, smoothing, trend.|Forecast errors; seasonality; A-CAT case","Capacity planning and process design.|Process-capacity analysis; machine and labour needs","Line balancing with Ranked Positional Weight.|Takt, cycle and throughput time; layouts"]],
+["Unit III · Inventory & supply chain",["Inventory costs and the logic of ordering.|Independent demand; deterministic models","Continuous vs periodic review: stock-up vs stock-out.|Uncertainty in demand; control systems","ABC, FSN and VED classification, and vendor managed inventory.|Selective control; VMI","The bullwhip effect and push vs pull supply chains.|Mother Dairy; role of technology"]],
+["Unit IV · Quality management",["TQM and the seven QC tools.|Histogram; Pareto; fishbone; quality costing","Statistical process control: reading control charts.|C, P, X-bar and R charts","Six Sigma: DMAIC, DPMO, Cp and Cpk.|Process capability; variation"]],
+["Unit V · Projects & current trends",["Critical path method and work breakdown structure.|Project phases; network analysis; Tastee Snax","Lean operations and ethical issues in OM.|Lean concepts; sustainability"]]]}
+};
+var keys=Object.keys(S),sel="ALL",rM=5,sM=2,timer=null,cur=null,notes="",left=0,total=0,paused=false,next=null;
+var LBL={ALL:"🎲 Random"};
+var $=function(i){return document.getElementById(i)};
+function pill(txt,on,fn){var b=document.createElement("button");b.className="pill";b.textContent=txt;b.setAttribute("aria-pressed",on);b.onclick=fn;return b}
+function drawSubj(){var el=$("subj");el.innerHTML="";[["ALL",LBL.ALL]].concat(keys.map(function(k){return[k,k]})).forEach(function(x){el.appendChild(pill(x[1],sel===x[0],function(){sel=x[0];drawSubj();if(!cur||left===0)idle()}))})}
+function drawTimes(id,arr,val,set){var el=$(id);el.innerHTML="";arr.forEach(function(m){el.appendChild(pill(m+" min",m===val,function(){set(m);drawTimes(id,arr,m,set)}))})}
+function pool(){var o=[];(sel==="ALL"?keys:[sel]).forEach(function(k){S[k].u.forEach(function(u){u[1].forEach(function(t){var p=t.split("|");o.push({k:k,u:u[0],t:p[0],h:p[1].split(";").map(function(x){return x.trim()})})})})});return o}
+function sz(t){return t.length<34?"xl":t.length<70?"lg":t.length<110?"md":"sm"}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function where(){return '<p class="where">'+S[cur.k].n+' · '+cur.u+'</p>'}
+function out(h){$("stage").innerHTML=h}
+function idle(){clearInterval(timer);cur=null;out('<p class="eye">Ready</p><h2 class="topic xl" style="font-size:clamp(40px,9vw,80px)">Spin to get your topic</h2><div class="acts"><button class="btn pri" id="pri">Spin</button><button class="btn" disabled>Start '+rM+' min research</button><button class="btn gear" id="gr" aria-label="Timer settings">⚙</button></div>');wire()}
+function wire(){$("pri").onclick=spin;var g=$("gr");if(g)g.onclick=function(){$("set").classList.toggle("on")}}
+function spin(){clearInterval(timer);notes="";var p=pool(),n=0,d=60,r0=matchMedia("(prefers-reduced-motion:reduce)").matches,T=r0?1:22;
+(function tick(){var r=p[Math.floor(Math.random()*p.length)];n++;
+if(n>=T){cur=r;return showTopic()}
+out('<p class="eye">Spinning</p><h2 class="topic reel '+sz(r.t)+'">'+r.t+'</h2>');d+=n*4;setTimeout(tick,d)})()}
+function showTopic(){left=1;out('<p class="eye">Ready</p><h2 class="topic '+sz(cur.t)+'">'+cur.t+'</h2>'+where()+'<div class="acts"><button class="btn pri" id="pri">Start '+rM+' min research</button><button class="btn" id="re">Spin again</button><button class="btn gear" id="gr" aria-label="Timer settings">⚙</button></div>');$("pri").onclick=research;$("re").onclick=spin;$("gr").onclick=function(){$("set").classList.toggle("on")}}
+function fmt(s){return Math.floor(s/60)+":"+("0"+s%60).slice(-2)}
+function beep(){try{var a=new(window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator(),g=a.createGain();o.connect(g);g.connect(a.destination);o.frequency.value=660;g.gain.setValueAtTime(.15,a.currentTime);g.gain.exponentialRampToValueAtTime(.001,a.currentTime+.8);o.start();o.stop(a.currentTime+.8)}catch(e){}}
+function run(secs,done){clearInterval(timer);paused=false;left=secs;total=secs;next=done;draw();timer=setInterval(function(){if(paused)return;left--;draw();if(left<=0){clearInterval(timer);beep();done()}},1000)}
+function draw(){var c=$("ck"),b=$("br");if(c)c.textContent=fmt(Math.max(left,0));if(b)b.style.width=(Math.max(left,0)/total*100)+"%"}
+function pauseBtn(){var b=$("pz");b.onclick=function(){paused=!paused;b.textContent=paused?"Resume":"Pause"}}
+function research(){var ang=cur.h.map(function(h){return '<label><input type="checkbox"><span>'+h+'</span></label>'}).join("");
+out('<p class="eye">Researching</p><div class="clock" id="ck"></div><div class="bar"><i id="br"></i></div><h2 class="topic sm" style="margin-top:24px">'+cur.t+'</h2><p class="lbl">Research angles — tick them off</p><div class="chips">'+ang+'</div><textarea id="nt" aria-label="Research notes" placeholder="Definitions, formulas, a real company, one example…">'+esc(notes)+'</textarea><div class="acts"><button class="btn pri" id="pri">Start speech</button><button class="btn" id="pz">Pause</button></div>');
+$("nt").oninput=function(){notes=this.value};pauseBtn();$("pri").onclick=speak;run(rM*60,speak)}
+function speak(){clearInterval(timer);
+out('<p class="eye">Speak now</p><div class="clock" id="ck"></div><div class="bar"><i id="br"></i></div><h2 class="topic sm" style="margin-top:24px">'+cur.t+'</h2><textarea id="nt" aria-label="Your notes" placeholder="Your notes">'+esc(notes)+'</textarea><div class="acts"><button class="btn pri" id="pri">I’m done</button><button class="btn" id="pz">Pause</button></div>');
+$("nt").oninput=function(){notes=this.value};pauseBtn();$("pri").onclick=finish;run(sM*60,finish)}
+function finish(){clearInterval(timer);out('<p class="eye">Well done</p><h2 class="topic md">'+cur.t+'</h2>'+where()+'<p class="desc">Did you define the key terms, give one real example, and end with a clear takeaway?</p><div class="acts"><button class="btn pri" id="pri">Spin another</button><button class="btn" id="rp">Retry this topic</button></div>');$("pri").onclick=spin;$("rp").onclick=showTopic}
+document.addEventListener("keydown",function(e){if(e.code==="Space"&&!/TEXTAREA|BUTTON|INPUT/.test(e.target.tagName)){e.preventDefault();var p=$("pri");if(p)p.click()}});
+drawSubj();
+drawTimes("rs",[2,3,5,10],rM,function(m){rM=m;if(cur&&left===1)showTopic();else if(!cur)idle()});
+drawTimes("ss",[1,2,3,5],sM,function(m){sM=m});
+idle();
+</script>
+</body>
+</html>

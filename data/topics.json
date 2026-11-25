@@ -1,0 +1,771 @@
+{
+  "AMM": {
+    "course": "MBA231 Advanced Marketing Management",
+    "units": [
+      {
+        "unit": "Unit I · Strategic marketing & competitive advantage",
+        "topics": [
+          {
+            "prompt": "Why is attention the scarcest resource in marketing today?",
+            "angles": [
+              "Attention economy",
+              "Wu’s Attention Merchants",
+              "insight-driven strategy"
+            ]
+          },
+          {
+            "prompt": "Explain the 4 Vs and how they shape a brand’s marketing intelligence.",
+            "angles": [
+              "Volume, variety, velocity, veracity",
+              "one real brand"
+            ]
+          },
+          {
+            "prompt": "What does the Herfindahl Index say about market concentration?",
+            "angles": [
+              "Sum of squared shares",
+              "monopoly vs competition",
+              "relative market share"
+            ]
+          },
+          {
+            "prompt": "How would you judge a campaign using Lift and ROMI?",
+            "angles": [
+              "Lift",
+              "ROMI formula",
+              "limits of each"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit II · Consumer insights",
+        "topics": [
+          {
+            "prompt": "Seven principles of herd marketing: why do consumers copy each other?",
+            "angles": [
+              "Earls’ Herd",
+              "social conditions over persuasion",
+              "examples"
+            ]
+          },
+          {
+            "prompt": "How does social listening capture the voice of the customer?",
+            "angles": [
+              "Tools",
+              "sentiment themes",
+              "monthly KPIs"
+            ]
+          },
+          {
+            "prompt": "Is NPS enough to measure brand health?",
+            "angles": [
+              "Willingness to recommend",
+              "promoters vs detractors",
+              "limits"
+            ]
+          },
+          {
+            "prompt": "Dweck’s growth and fixed mindsets: what do they mean for consumers?",
+            "angles": [
+              "Support vs star mindset",
+              "profiles",
+              "marketing use"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit III · Consumer mindsets & pricing",
+        "topics": [
+          {
+            "prompt": "Margin vs mark-up: why do managers confuse them?",
+            "angles": [
+              "Formulas",
+              "sensitivity",
+              "link to financial goals"
+            ]
+          },
+          {
+            "prompt": "Walk through a breakeven analysis for a new product launch.",
+            "angles": [
+              "Fixed cost",
+              "contribution per unit",
+              "target profit"
+            ]
+          },
+          {
+            "prompt": "What do price elasticity and reservation price tell a pricing manager?",
+            "angles": [
+              "Elasticity",
+              "max reservation price",
+              "willingness to buy"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit IV · Go-to-market strategy",
+        "topics": [
+          {
+            "prompt": "What makes a go-to-market architecture work?",
+            "angles": [
+              "Channels",
+              "partner ecosystems",
+              "sequencing",
+              "90-day plan"
+            ]
+          },
+          {
+            "prompt": "SAVE vs the 4Ps: why does B2B need a different model?",
+            "angles": [
+              "Solution, Access, Value, Education"
+            ]
+          },
+          {
+            "prompt": "Forecast a launch using trial rate, repeat rate and cannibalization.",
+            "angles": [
+              "Trial volume",
+              "repeat volume",
+              "brand-on-brand cannibalization"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit V · CLV & penetration metrics",
+        "topics": [
+          {
+            "prompt": "STEPPS: what makes products and ideas contagious?",
+            "angles": [
+              "Six principles",
+              "Berger",
+              "concrete tactics"
+            ]
+          },
+          {
+            "prompt": "How is Customer Lifetime Value calculated and used?",
+            "angles": [
+              "Retention",
+              "margin",
+              "discount rate",
+              "CRED"
+            ]
+          },
+          {
+            "prompt": "Penetration share, share of requirements and heavy usage index.",
+            "angles": [
+              "Brand penetration",
+              "loyal segments",
+              "optimising presence"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "MHR": {
+    "course": "MBA232 Management of Human Resources",
+    "units": [
+      {
+        "unit": "Unit I · Human resource management",
+        "topics": [
+          {
+            "prompt": "Should HR have a seat at the leadership table?",
+            "angles": [
+              "HR as business partner",
+              "strategic HRM",
+              "Infosys case"
+            ]
+          },
+          {
+            "prompt": "Do sustainable HR practices create long-term value?",
+            "angles": [
+              "Models of HRM",
+              "HR policies",
+              "sustainability"
+            ]
+          },
+          {
+            "prompt": "Using HR analytics responsibly: insight vs ethics.",
+            "angles": [
+              "Attrition",
+              "absenteeism",
+              "people analytics concerns"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit II · Workforce planning & talent acquisition",
+        "topics": [
+          {
+            "prompt": "Can AI forecast workforce needs better than managers?",
+            "angles": [
+              "Workforce planning",
+              "forecasting",
+              "reliability"
+            ]
+          },
+          {
+            "prompt": "Job description vs job specification: what’s the difference?",
+            "angles": [
+              "Job analysis methods",
+              "KRAs and KPIs"
+            ]
+          },
+          {
+            "prompt": "How does employer branding win Gen Z talent?",
+            "angles": [
+              "EVP",
+              "culture",
+              "talent acquisition"
+            ]
+          },
+          {
+            "prompt": "Automation and AI in hiring: efficiency vs ethics and DEI.",
+            "angles": [
+              "ATS and RPA",
+              "bias",
+              "selection process"
+            ]
+          },
+          {
+            "prompt": "Why do good people leave? Retention and engagement.",
+            "angles": [
+              "Attrition crisis",
+              "engagement initiatives",
+              "job security"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit III · Performance management & compensation",
+        "topics": [
+          {
+            "prompt": "Why do appraisals sometimes break people?",
+            "angles": [
+              "Appraisal paradox",
+              "design flaws",
+              "modern trends"
+            ]
+          },
+          {
+            "prompt": "KRAs vs KPIs, and the case for real-time feedback.",
+            "angles": [
+              "Shorter goal cycles",
+              "constructive feedback"
+            ]
+          },
+          {
+            "prompt": "How do you build a market-competitive pay plan?",
+            "angles": [
+              "Job evaluation",
+              "pay factors",
+              "executive incentives"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit IV · Human resource development",
+        "topics": [
+          {
+            "prompt": "Training needs analysis: upskilling or reskilling?",
+            "angles": [
+              "TNA steps",
+              "aligning strategy and training"
+            ]
+          },
+          {
+            "prompt": "The ADDIE model: five steps to a training programme.",
+            "angles": [
+              "Analysis to evaluation",
+              "limits of AI design"
+            ]
+          },
+          {
+            "prompt": "Microlearning, gamification and AR/VR in learning.",
+            "angles": [
+              "Continuous learning",
+              "immersive tech",
+              "AI"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit V · Industrial relations",
+        "topics": [
+          {
+            "prompt": "From labour laws to labour codes: what changes for managers?",
+            "angles": [
+              "Trade unions",
+              "collective bargaining",
+              "participation"
+            ]
+          },
+          {
+            "prompt": "Handling disputes and managing gig and hybrid workers.",
+            "angles": [
+              "Grievance handling",
+              "Maruti Suzuki unrest",
+              "positive relations"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "FM": {
+    "course": "MBA234 Financial Management",
+    "units": [
+      {
+        "unit": "Unit I · Overview & time value of money",
+        "topics": [
+          {
+            "prompt": "The three decisions of financial management and the firm’s goal.",
+            "angles": [
+              "Investing, financing, dividend",
+              "shareholder wealth"
+            ]
+          },
+          {
+            "prompt": "Agency problems: managers, stockholders and bondholders.",
+            "angles": [
+              "Conflicts",
+              "governance",
+              "ethics"
+            ]
+          },
+          {
+            "prompt": "Why is a rupee today worth more than a rupee tomorrow?",
+            "angles": [
+              "Future and present value",
+              "timelines",
+              "discounting"
+            ]
+          },
+          {
+            "prompt": "Annuities, perpetuities, and quoted vs effective rates.",
+            "angles": [
+              "Annuity due",
+              "fractional periods",
+              "EAR"
+            ]
+          },
+          {
+            "prompt": "How does a loan amortisation schedule work?",
+            "angles": [
+              "Interest vs principal",
+              "balance",
+              "Excel"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit II · Cost of capital",
+        "topics": [
+          {
+            "prompt": "Cost of debt and preferred stock: pre-tax vs post-tax.",
+            "angles": [
+              "Tax shield",
+              "preferred cost"
+            ]
+          },
+          {
+            "prompt": "Cost of equity: CAPM or DCF?",
+            "angles": [
+              "Beta, Rf, premium",
+              "growth",
+              "flotation cost"
+            ]
+          },
+          {
+            "prompt": "How is WACC built, and which weights should you use?",
+            "angles": [
+              "Book, market, target weights",
+              "Domino’s case"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit III · Capital budgeting",
+        "topics": [
+          {
+            "prompt": "NPV, IRR and payback: which should win?",
+            "angles": [
+              "Discounted payback",
+              "conflicts",
+              "decision rules"
+            ]
+          },
+          {
+            "prompt": "Why do managers like MIRR?",
+            "angles": [
+              "Reinvestment assumption",
+              "comparison of techniques"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit IV · Capital structure, leverage & dividends",
+        "topics": [
+          {
+            "prompt": "Book, market and target capital structure.",
+            "angles": [
+              "Weights",
+              "optimal structure"
+            ]
+          },
+          {
+            "prompt": "Operating, financial and total leverage: a double-edged sword.",
+            "angles": [
+              "DOL, DFL, DTL",
+              "Asahi India Glass"
+            ]
+          },
+          {
+            "prompt": "Dividends vs capital gains: what should a firm pay out?",
+            "angles": [
+              "Policy factors",
+              "Berkshire Hathaway"
+            ]
+          },
+          {
+            "prompt": "Stock dividends vs share repurchases.",
+            "angles": [
+              "Effect on wealth",
+              "signalling",
+              "cash dividends"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit V · Working capital",
+        "topics": [
+          {
+            "prompt": "Gross vs net working capital, aggressive vs conservative financing.",
+            "angles": [
+              "Types",
+              "current asset financing policies"
+            ]
+          },
+          {
+            "prompt": "What does the cash conversion cycle reveal?",
+            "angles": [
+              "Inventory, collection, payables periods"
+            ]
+          },
+          {
+            "prompt": "Cash budgets, term loans and the real cost of trade credit.",
+            "angles": [
+              "Short-term financing",
+              "liquidity forecasting"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "BAAI": {
+    "course": "MBA236 Business Analytics and AI",
+    "units": [
+      {
+        "unit": "Unit I · Introduction to analytics",
+        "topics": [
+          {
+            "prompt": "Frame a business problem with 5W1H and OSEMN.",
+            "angles": [
+              "Problem framing",
+              "data workflow"
+            ]
+          },
+          {
+            "prompt": "Descriptive, diagnostic, predictive, prescriptive: match each to a decision.",
+            "angles": [
+              "Four analytics types",
+              "examples"
+            ]
+          },
+          {
+            "prompt": "Choosing the right chart: good vs bad visualisation.",
+            "angles": [
+              "Chart selection",
+              "data nature",
+              "insight"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit II · Supervised learning",
+        "topics": [
+          {
+            "prompt": "The machine learning process, from data to deployed model.",
+            "angles": [
+              "Supervised vs unsupervised",
+              "ML lifecycle"
+            ]
+          },
+          {
+            "prompt": "Logistic regression for churn prediction.",
+            "angles": [
+              "Classification",
+              "binary outcomes",
+              "interpretation"
+            ]
+          },
+          {
+            "prompt": "Decision tree vs K-nearest neighbour.",
+            "angles": [
+              "Employee attrition",
+              "similarity",
+              "interpretability"
+            ]
+          },
+          {
+            "prompt": "Simple and multiple linear regression for forecasting sales.",
+            "angles": [
+              "Coefficients",
+              "predicting numbers"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit III · Unsupervised learning",
+        "topics": [
+          {
+            "prompt": "K-means clustering for customer segmentation.",
+            "angles": [
+              "Choosing K",
+              "interpreting groups"
+            ]
+          },
+          {
+            "prompt": "Association rules and Apriori: market basket analysis.",
+            "angles": [
+              "Support, confidence, lift"
+            ]
+          },
+          {
+            "prompt": "Reinforcement learning in business, in plain words.",
+            "angles": [
+              "Agent, reward",
+              "examples"
+            ]
+          },
+          {
+            "prompt": "Accuracy, precision and recall: which metric matters?",
+            "angles": [
+              "Model evaluation",
+              "error metrics",
+              "trade-offs"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit IV · Foundations of AI",
+        "topics": [
+          {
+            "prompt": "The PEAS framework: design an AI agent for retail.",
+            "angles": [
+              "Performance, environment, actuators, sensors"
+            ]
+          },
+          {
+            "prompt": "The economics of AI: who gains and who loses?",
+            "angles": [
+              "Adoption",
+              "productivity",
+              "history"
+            ]
+          },
+          {
+            "prompt": "Generative AI vs agentic AI in business.",
+            "angles": [
+              "Deep learning",
+              "NLP",
+              "applications"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit V · Ethics & emerging trends",
+        "topics": [
+          {
+            "prompt": "Core principles of responsible AI.",
+            "angles": [
+              "Fairness",
+              "accountability",
+              "transparency"
+            ]
+          },
+          {
+            "prompt": "Bias in resume screening and loan approval.",
+            "angles": [
+              "Ethical dilemmas",
+              "AI risks and safety"
+            ]
+          },
+          {
+            "prompt": "Why do we need explainable AI?",
+            "angles": [
+              "XAI foundations",
+              "trust",
+              "governance"
+            ]
+          },
+          {
+            "prompt": "Global and national AI policy frameworks.",
+            "angles": [
+              "UNESCO",
+              "Turing Institute",
+              "AI in society"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "OM": {
+    "course": "MBA235 Operations Management",
+    "units": [
+      {
+        "unit": "Unit I · Operations strategy & location",
+        "topics": [
+          {
+            "prompt": "How do cost and flexibility trade off in operations strategy?",
+            "angles": [
+              "Strategy formulation",
+              "breakeven",
+              "sustainability"
+            ]
+          },
+          {
+            "prompt": "Choosing a plant location: factor rating, centre of gravity, load-distance.",
+            "angles": [
+              "Location factors",
+              "Polaris plant"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit II · Forecasting, capacity & layout",
+        "topics": [
+          {
+            "prompt": "Time-series forecasting: moving average, smoothing, trend.",
+            "angles": [
+              "Forecast errors",
+              "seasonality",
+              "A-CAT case"
+            ]
+          },
+          {
+            "prompt": "Capacity planning and process design.",
+            "angles": [
+              "Process-capacity analysis",
+              "machine and labour needs"
+            ]
+          },
+          {
+            "prompt": "Line balancing with Ranked Positional Weight.",
+            "angles": [
+              "Takt, cycle and throughput time",
+              "layouts"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit III · Inventory & supply chain",
+        "topics": [
+          {
+            "prompt": "Inventory costs and the logic of ordering.",
+            "angles": [
+              "Independent demand",
+              "deterministic models"
+            ]
+          },
+          {
+            "prompt": "Continuous vs periodic review: stock-up vs stock-out.",
+            "angles": [
+              "Uncertainty in demand",
+              "control systems"
+            ]
+          },
+          {
+            "prompt": "ABC, FSN and VED classification, and vendor managed inventory.",
+            "angles": [
+              "Selective control",
+              "VMI"
+            ]
+          },
+          {
+            "prompt": "The bullwhip effect and push vs pull supply chains.",
+            "angles": [
+              "Mother Dairy",
+              "role of technology"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit IV · Quality management",
+        "topics": [
+          {
+            "prompt": "TQM and the seven QC tools.",
+            "angles": [
+              "Histogram",
+              "Pareto",
+              "fishbone",
+              "quality costing"
+            ]
+          },
+          {
+            "prompt": "Statistical process control: reading control charts.",
+            "angles": [
+              "C, P, X-bar and R charts"
+            ]
+          },
+          {
+            "prompt": "Six Sigma: DMAIC, DPMO, Cp and Cpk.",
+            "angles": [
+              "Process capability",
+              "variation"
+            ]
+          }
+        ]
+      },
+      {
+        "unit": "Unit V · Projects & current trends",
+        "topics": [
+          {
+            "prompt": "Critical path method and work breakdown structure.",
+            "angles": [
+              "Project phases",
+              "network analysis",
+              "Tastee Snax"
+            ]
+          },
+          {
+            "prompt": "Lean operations and ethical issues in OM.",
+            "angles": [
+              "Lean concepts",
+              "sustainability"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
