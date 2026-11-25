@@ -106,10 +106,14 @@ function where(){return '<p class="where">'+S[cur.k].n+' · '+cur.u+'</p>'}
 function out(h){$("stage").innerHTML=h}
 function idle(){clearInterval(timer);cur=null;out('<p class="eye">Ready</p><h2 class="topic xl" style="font-size:clamp(40px,9vw,80px)">Spin to get your topic</h2><div class="acts"><button class="btn pri" id="pri">Spin</button><button class="btn" disabled>Start '+rM+' min research</button><button class="btn gear" id="gr" aria-label="Timer settings">⚙</button></div>');wire()}
 function wire(){$("pri").onclick=spin;var g=$("gr");if(g)g.onclick=function(){$("set").classList.toggle("on")}}
-function spin(){clearInterval(timer);notes="";var p=pool(),n=0,d=60,r0=matchMedia("(prefers-reduced-motion:reduce)").matches,T=r0?1:22;
+function _ac(){try{return new(window.AudioContext||window.webkitAudioContext)()}catch(e){return null}}
+function tickSnd(){var a=_ac();if(!a)return;var o=a.createOscillator(),g=a.createGain();o.type="square";o.connect(g);g.connect(a.destination);o.frequency.value=160+Math.random()*80;g.gain.setValueAtTime(0.07,a.currentTime);g.gain.exponentialRampToValueAtTime(0.001,a.currentTime+0.04);o.start();o.stop(a.currentTime+0.05)}
+function landSnd(){var a=_ac();if(!a)return;var o=a.createOscillator(),g=a.createGain();o.type="sine";o.connect(g);g.connect(a.destination);o.frequency.setValueAtTime(540,a.currentTime);o.frequency.exponentialRampToValueAtTime(280,a.currentTime+0.18);g.gain.setValueAtTime(0.28,a.currentTime);g.gain.exponentialRampToValueAtTime(0.001,a.currentTime+0.35);o.start();o.stop(a.currentTime+0.35)}
+function spin(){clearInterval(timer);notes="";var p=pool(),n=0,d=28,r0=matchMedia("(prefers-reduced-motion:reduce)").matches,T=r0?1:30;
 (function tick(){var r=p[Math.floor(Math.random()*p.length)];n++;
-if(n>=T){cur=r;return showTopic()}
-out('<p class="eye">Spinning</p><h2 class="topic reel '+sz(r.t)+'">'+r.t+'</h2>');d+=n*4;setTimeout(tick,d)})()}
+if(n>=T){cur=r;landSnd();return showTopic()}
+tickSnd();
+out('<p class="eye">Spinning</p><h2 class="topic reel '+sz(r.t)+'">'+r.t+'</h2>');d+=n*2;setTimeout(tick,d)})()}
 function showTopic(){left=1;out('<p class="eye">Ready</p><h2 class="topic '+sz(cur.t)+'">'+cur.t+'</h2>'+where()+'<div class="acts"><button class="btn pri" id="pri">Start '+rM+' min research</button><button class="btn" id="re">Spin again</button><button class="btn gear" id="gr" aria-label="Timer settings">⚙</button></div>');$("pri").onclick=research;$("re").onclick=spin;$("gr").onclick=function(){$("set").classList.toggle("on")}}
 function fmt(s){return Math.floor(s/60)+":"+("0"+s%60).slice(-2)}
 function beep(){try{var a=new(window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator(),g=a.createGain();o.connect(g);g.connect(a.destination);o.frequency.value=660;g.gain.setValueAtTime(.15,a.currentTime);g.gain.exponentialRampToValueAtTime(.001,a.currentTime+.8);o.start();o.stop(a.currentTime+.8)}catch(e){}}
