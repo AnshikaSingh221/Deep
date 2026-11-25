@@ -4,9 +4,13 @@
   "description": "Deep Research MBA Trimester II Speaking Practice App",
   "scripts": {
     "dev": "serve . -l 3000",
-    "start": "serve . -l 3000"
+    "start": "serve . -l 3000",
+    "build": "echo 'No build step needed'"
   },
   "devDependencies": {
     "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
