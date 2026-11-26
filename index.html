@@ -40,12 +40,18 @@ h1{font:600 clamp(32px,6vw,44px)/1.1 "Playfair Display",Georgia,serif;margin:0;l
 .lbl{color:var(--mut);font-size:13px;margin:20px 0 0}
 textarea{width:min(640px,100%);min-height:110px;margin-top:10px;background:var(--glass);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:14px 16px;font:400 15px/1.5 Outfit,system-ui,sans-serif;resize:vertical}
 textarea::placeholder{color:var(--mut)}
-.set{display:none;margin:30px auto 0;max-width:520px;padding:18px;border:1px solid var(--line);background:var(--glass);border-radius:20px}
+.set{display:none;margin:30px auto 0;max-width:600px;padding:20px;border:1px solid var(--line);background:var(--glass);border-radius:20px}
 .set.on{display:block}
-.set p{margin:12px 0 8px;color:var(--mut);font-size:14px}.set p:first-child{margin-top:0}
+.set p{margin:14px 0 8px;color:var(--mut);font-size:14px}.set p:first-child{margin-top:0}
 .set .pills{background:transparent}
+.trow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px}
+.tcus{display:inline-flex;align-items:center;gap:4px;padding:4px 5px 4px 12px;border:1px solid var(--line);background:var(--glass);border-radius:999px}
+.tinp{width:64px;border:0;background:transparent;color:var(--ink);font:600 14px Outfit,system-ui,sans-serif;text-align:center;outline:none}
+.tinp::placeholder{color:var(--mut);font-weight:500}
+.tinp::-webkit-inner-spin-button,.tinp::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.tadd{padding:7px 14px;font-size:14px;background:rgba(255,255,255,.08)}
 .hint{color:var(--mut);font-size:13px;margin-top:40px}
-@media(min-width:768px){main{padding:36px 48px 40px}h1{font-size:clamp(40px,4.5vw,56px)}.by{font-size:17px;margin:6px 0 28px}.pill{font-size:16px;padding:11px 22px}.desc{max-width:560px;font-size:17px;margin:16px auto 0}.stage{margin:clamp(28px,6vh,52px) auto 0;min-height:320px}.eye{font-size:14px}.md{font-size:clamp(32px,5vw,48px)}.sm{font-size:clamp(25px,3.6vw,34px)}.where{font-size:17px}.btn{font-size:18px;padding:17px 36px}.gear{width:58px;height:58px;font-size:22px}.chips{max-width:760px}.chips label{font-size:16px;padding:10px 18px}textarea{width:min(760px,100%);min-height:130px;font-size:16px}.hint{font-size:14px;margin-top:28px}}
+@media(min-width:768px){main{padding:36px 48px 40px}h1{font-size:clamp(40px,4.5vw,56px)}.by{font-size:17px;margin:6px 0 28px}.pill{font-size:16px;padding:11px 22px}.desc{max-width:560px;font-size:17px;margin:16px auto 0}.stage{margin:clamp(28px,6vh,52px) auto 0;min-height:320px}.eye{font-size:14px}.md{font-size:clamp(32px,5vw,48px)}.sm{font-size:clamp(25px,3.6vw,34px)}.where{font-size:17px}.btn{font-size:18px;padding:17px 36px}.gear{width:58px;height:58px;padding:0;font-size:22px}.chips{max-width:760px}.chips label{font-size:16px;padding:10px 18px}textarea{width:min(760px,100%);min-height:130px;font-size:16px}.hint{font-size:14px;margin-top:28px}}
 button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -98,7 +104,7 @@ var LBL={ALL:"🎲 Random"};
 var $=function(i){return document.getElementById(i)};
 function pill(txt,on,fn){var b=document.createElement("button");b.className="pill";b.textContent=txt;b.setAttribute("aria-pressed",on);b.onclick=fn;return b}
 function drawSubj(){var el=$("subj");el.innerHTML="";[["ALL",LBL.ALL]].concat(keys.map(function(k){return[k,k]})).forEach(function(x){el.appendChild(pill(x[1],sel===x[0],function(){sel=x[0];drawSubj();if(!cur||left===0)idle()}))})}
-function drawTimes(id,arr,val,set){var el=$(id);el.innerHTML="";arr.forEach(function(m){el.appendChild(pill(m+" min",m===val,function(){set(m);drawTimes(id,arr,m,set)}))})}
+function drawTimes(id,arr,val,set){var el=$(id);el.innerHTML="";el.className="trow";var ps=document.createElement("div");ps.className="pills";arr.forEach(function(m){ps.appendChild(pill(m+" min",m===val,function(){set(m);drawTimes(id,arr,m,set)}))});el.appendChild(ps);var w=document.createElement("div");w.className="tcus";var inp=document.createElement("input");inp.className="tinp";inp.type="number";inp.min="0.5";inp.max="180";inp.step="any";inp.placeholder="min";inp.setAttribute("aria-label","Custom minutes");var btn=document.createElement("button");btn.type="button";btn.className="pill tadd";btn.textContent="+ Set";function apply(){var v=parseFloat(inp.value);if(!isFinite(v)||v<=0||v>180)return;v=Math.round(v*100)/100;if(arr.indexOf(v)===-1){arr.push(v);arr.sort(function(a,b){return a-b})}set(v);drawTimes(id,arr,v,set)}btn.onclick=apply;inp.onkeydown=function(e){if(e.key==="Enter"){e.preventDefault();apply()}};w.appendChild(inp);w.appendChild(btn);el.appendChild(w)}
 function pool(){var o=[];(sel==="ALL"?keys:[sel]).forEach(function(k){S[k].u.forEach(function(u){u[1].forEach(function(t){var p=t.split("|");o.push({k:k,u:u[0],t:p[0],h:p[1].split(";").map(function(x){return x.trim()})})})})});return o}
 function sz(t){return t.length<34?"xl":t.length<70?"lg":t.length<110?"md":"sm"}
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
@@ -130,8 +136,9 @@ $("nt").oninput=function(){notes=this.value};pauseBtn();$("pri").onclick=finish;
 function finish(){clearInterval(timer);out('<p class="eye">Well done</p><h2 class="topic md">'+cur.t+'</h2>'+where()+'<p class="desc">Did you define the key terms, give one real example, and end with a clear takeaway?</p><div class="acts"><button class="btn pri" id="pri">Spin another</button><button class="btn" id="rp">Retry this topic</button></div>');$("pri").onclick=spin;$("rp").onclick=showTopic}
 document.addEventListener("keydown",function(e){if(e.code==="Space"&&!/TEXTAREA|BUTTON|INPUT/.test(e.target.tagName)){e.preventDefault();var p=$("pri");if(p)p.click()}});
 drawSubj();
-drawTimes("rs",[2,3,5,10],rM,function(m){rM=m;if(cur&&left===1)showTopic();else if(!cur)idle()});
-drawTimes("ss",[1,2,3,5],sM,function(m){sM=m});
+var rOpts=[2,3,5,10],sOpts=[1,2,3,5];
+drawTimes("rs",rOpts,rM,function(m){rM=m;if(cur&&left===1)showTopic();else if(!cur)idle()});
+drawTimes("ss",sOpts,sM,function(m){sM=m});
 idle();
 </script>
 </body>
