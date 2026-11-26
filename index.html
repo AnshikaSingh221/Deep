@@ -69,42 +69,12 @@ textarea::placeholder{color:var(--mut)}
 .card ol{margin:10px 0 0;padding-left:20px;line-height:1.6}
 .card li{margin:3px 0}
 .card .btn.pri{padding:13px 28px;font-size:16px}
-.deco{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.stk{position:absolute;opacity:.88;filter:drop-shadow(0 10px 20px rgba(0,0,0,.28));animation:flt 7s ease-in-out infinite}
-.stk.b{animation-duration:9s;animation-delay:-3s}.stk.c{animation-duration:8s;animation-delay:-5s}
-@keyframes flt{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-10px) rotate(calc(var(--r,0deg) + 4deg))}}
-@media(max-width:900px){.stk{opacity:.35;transform:scale(.7)}}
-@media(max-width:600px){.stk.hide-m{display:none}}
 @media(min-width:768px){main{padding:36px 48px 40px}h1{font-size:clamp(40px,4.5vw,56px)}.by{font-size:17px;margin:6px 0 28px}.pill{font-size:16px;padding:11px 22px}.desc{max-width:560px;font-size:17px;margin:16px auto 0}.stage{margin:clamp(28px,6vh,52px) auto 0;min-height:320px}.eye{font-size:14px}.md{font-size:clamp(32px,5vw,48px)}.sm{font-size:clamp(25px,3.6vw,34px)}.where{font-size:17px}.btn{font-size:18px;padding:17px 36px}.gear{width:58px;height:58px;padding:0;font-size:22px}.chips{max-width:760px}.chips label{font-size:16px;padding:10px 18px}textarea{width:min(760px,100%);min-height:130px;font-size:16px}.hint{font-size:14px;margin-top:28px}}
 button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div class="deco" aria-hidden="true">
-<svg width="0" height="0" style="position:absolute"><defs>
-<linearGradient id="chr" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff"/><stop offset="28%" stop-color="#d8d6d2"/><stop offset="52%" stop-color="#6e6b68"/><stop offset="76%" stop-color="#f2efeb"/><stop offset="100%" stop-color="#9e9a95"/></linearGradient>
-<radialGradient id="chrR" cx="35%" cy="28%" r="70%"><stop offset="0%" stop-color="#fff"/><stop offset="35%" stop-color="#dbd8d2"/><stop offset="75%" stop-color="#75716c"/><stop offset="100%" stop-color="#b8b3ac"/></radialGradient>
-<radialGradient id="pnk" cx="35%" cy="28%" r="72%"><stop offset="0%" stop-color="#ffe8f3"/><stop offset="32%" stop-color="#e39bb5"/><stop offset="72%" stop-color="#8b425c"/><stop offset="100%" stop-color="#c97291"/></radialGradient>
-<radialGradient id="glt" cx="40%" cy="40%" r="70%"><stop offset="0%" stop-color="#fff5fa"/><stop offset="40%" stop-color="#f7bdd4"/><stop offset="100%" stop-color="#d489a8"/></radialGradient>
-</defs></svg>
-<!-- Top-left chrome star -->
-<svg class="stk" style="top:4%;left:3%;width:84px;--r:-12deg" viewBox="0 0 100 100"><path d="M50 6 L61 36 L94 38 L68 58 L77 90 L50 72 L23 90 L32 58 L6 38 L39 36 Z" fill="url(#chrR)" stroke="rgba(255,255,255,.65)" stroke-width="1.5" stroke-linejoin="round"/><ellipse cx="42" cy="34" rx="10" ry="5" fill="#fff" opacity=".6" transform="rotate(-25 42 34)"/></svg>
-<!-- Top-right pink metallic heart -->
-<svg class="stk b" style="top:5%;right:4%;width:82px;--r:14deg" viewBox="0 0 100 100"><path d="M50 88 C20 68 6 48 6 30 C6 15 18 6 31 6 C41 6 47 12 50 18 C53 12 59 6 69 6 C82 6 94 15 94 30 C94 48 80 68 50 88 Z" fill="url(#pnk)" stroke="rgba(255,230,242,.6)" stroke-width="1.5"/><ellipse cx="32" cy="24" rx="11" ry="6" fill="#fff" opacity=".65" transform="rotate(-30 32 24)"/></svg>
-<!-- Upper-left pink metallic heart -->
-<svg class="stk c hide-m" style="top:28%;left:2%;width:58px;--r:-16deg" viewBox="0 0 100 100"><path d="M50 88 C20 68 6 48 6 30 C6 15 18 6 31 6 C41 6 47 12 50 18 C53 12 59 6 69 6 C82 6 94 15 94 30 C94 48 80 68 50 88 Z" fill="url(#pnk)" stroke="rgba(255,230,242,.55)" stroke-width="1.5"/><ellipse cx="32" cy="24" rx="10" ry="5" fill="#fff" opacity=".6" transform="rotate(-30 32 24)"/></svg>
-<!-- Mid-right pink glitter star -->
-<svg class="stk hide-m" style="top:26%;right:3%;width:72px;--r:10deg" viewBox="0 0 100 100"><path d="M50 4 L61 35 L95 36 L68 57 L78 90 L50 71 L22 90 L32 57 L5 36 L39 35 Z" fill="url(#glt)" stroke="rgba(255,255,255,.7)" stroke-width="1"/><circle cx="40" cy="40" r="2" fill="#fff"/><circle cx="60" cy="48" r="1.8" fill="#fff"/><circle cx="48" cy="60" r="2.2" fill="#fff"/><circle cx="32" cy="42" r="1.5" fill="#fff"/><circle cx="68" cy="68" r="1.5" fill="#fff"/><circle cx="52" cy="25" r="1.6" fill="#fff"/></svg>
-<!-- Mid-left chrome heart -->
-<svg class="stk b hide-m" style="top:52%;left:4%;width:66px;--r:10deg" viewBox="0 0 100 100"><path d="M50 88 C20 68 6 48 6 30 C6 15 18 6 31 6 C41 6 47 12 50 18 C53 12 59 6 69 6 C82 6 94 15 94 30 C94 48 80 68 50 88 Z" fill="url(#chrR)" stroke="rgba(255,255,255,.6)" stroke-width="1.5"/><ellipse cx="33" cy="24" rx="10" ry="5" fill="#fff" opacity=".7" transform="rotate(-30 33 24)"/></svg>
-<!-- Mid-right chrome Y2K sparkles -->
-<svg class="stk c hide-m" style="top:53%;right:5%;width:74px;--r:-6deg" viewBox="0 0 100 100"><path d="M52 6 C55 34 66 45 94 48 C66 51 55 62 52 90 C49 62 38 51 10 48 C38 45 49 34 52 6 Z" fill="url(#chr)" stroke="#fff" stroke-width="1.2"/><path d="M22 64 C24 74 28 78 38 80 C28 82 24 86 22 96 C20 86 16 82 6 80 C16 78 20 74 22 64 Z" fill="url(#chr)" stroke="#fff" stroke-width="1"/></svg>
-<!-- Bottom-left silver disco ball -->
-<svg class="stk b" style="bottom:4%;left:3%;width:86px;--r:0deg" viewBox="0 0 100 100"><defs><clipPath id="dc"><circle cx="50" cy="50" r="44"/></clipPath></defs><circle cx="50" cy="50" r="44" fill="url(#chrR)" stroke="rgba(255,255,255,.6)" stroke-width="1.5"/><g clip-path="url(#dc)" stroke="#2b2623" stroke-width="1.1" opacity=".75"><path d="M6 25 H94 M6 37 H94 M6 50 H94 M6 63 H94 M6 75 H94" fill="none"/><path d="M50 6 V94 M34 6 Q26 50 34 94 M66 6 Q74 50 66 94 M19 12 Q8 50 19 88 M81 12 Q92 50 81 88" fill="none"/></g><rect x="33" y="26" width="10" height="9" fill="#fff" opacity=".85" rx="1"/><rect x="46" y="38" width="11" height="10" fill="#fff" opacity=".7" rx="1"/><rect x="23" y="39" width="8" height="9" fill="#444" opacity=".55" rx="1"/><rect x="59" y="51" width="10" height="10" fill="#fff" opacity=".6" rx="1"/></svg>
-<!-- Bottom-right pink glitter star & small chrome star -->
-<svg class="stk" style="bottom:5%;right:4%;width:82px;--r:-8deg" viewBox="0 0 100 100"><path d="M50 4 L61 35 L95 36 L68 57 L78 90 L50 71 L22 90 L32 57 L5 36 L39 35 Z" fill="url(#glt)" stroke="rgba(255,255,255,.75)" stroke-width="1"/><circle cx="44" cy="36" r="2.2" fill="#fff"/><circle cx="62" cy="50" r="2" fill="#fff"/><circle cx="38" cy="58" r="1.8" fill="#fff"/><circle cx="54" cy="64" r="2" fill="#fff"/></svg>
-</div>
 <div class="modal on" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-t">
 <div class="card">
 <h2 id="intro-t">Tired? Same.</h2>
