@@ -51,6 +51,13 @@ textarea::placeholder{color:var(--mut)}
 .tinp::-webkit-inner-spin-button,.tinp::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 .tadd{padding:7px 14px;font-size:14px;background:rgba(255,255,255,.08)}
 .hint{color:var(--mut);font-size:13px;margin-top:40px}
+.howto{max-width:760px;margin:40px auto 0;padding:24px 28px;border:1px solid var(--line);background:var(--glass);border-radius:20px;text-align:left;color:var(--mut);font-size:15px;line-height:1.65}
+.howto h2{font:600 22px/1.2 "Playfair Display",Georgia,serif;color:var(--ink);margin:0 0 8px}
+.howto h3{font:600 14px Outfit,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin:20px 0 8px}
+.howto p{margin:0 0 10px}
+.howto ol,.howto ul{margin:0 0 10px;padding-left:20px}
+.howto li{margin:6px 0}
+.howto strong{color:var(--ink);font-weight:600}
 @media(min-width:768px){main{padding:36px 48px 40px}h1{font-size:clamp(40px,4.5vw,56px)}.by{font-size:17px;margin:6px 0 28px}.pill{font-size:16px;padding:11px 22px}.desc{max-width:560px;font-size:17px;margin:16px auto 0}.stage{margin:clamp(28px,6vh,52px) auto 0;min-height:320px}.eye{font-size:14px}.md{font-size:clamp(32px,5vw,48px)}.sm{font-size:clamp(25px,3.6vw,34px)}.where{font-size:17px}.btn{font-size:18px;padding:17px 36px}.gear{width:58px;height:58px;padding:0;font-size:22px}.chips{max-width:760px}.chips label{font-size:16px;padding:10px 18px}textarea{width:min(760px,100%);min-height:130px;font-size:16px}.hint{font-size:14px;margin-top:28px}}
 button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -64,7 +71,36 @@ button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px soli
 <p class="desc">Spin a topic, set a research timer, then start the speech timer whenever you’re ready.</p>
 <section class="stage" id="stage" aria-live="polite"></section>
 <section class="set" id="set" aria-label="Timer settings"><p>Research timer</p><div class="pills" id="rs"></div><p>Speech timer</p><div class="pills" id="ss"></div></section>
-<p class="hint">Press Space to spin or move to the next step. Topics come only from your five course plans. Notes aren’t saved.</p>
+<section class="howto" aria-label="How to Play">
+<h2>Deep Research: How to Play</h2>
+<p><strong>The goal:</strong> practise thinking and speaking clearly about a real topic from your Trimester II courses. You research it first, then speak on it.</p>
+<h3>Rules</h3>
+<ol>
+<li><strong>Pick your subject.</strong> Choose 🎲 Random to draw from any course, or choose one: AMM, MHR, FM, BAAI or OM.</li>
+<li><strong>Set your timers.</strong> Tap ⚙ and choose a research time (2, 3, 5 or 10 minutes) and a speech time (1, 2, 3 or 5 minutes).</li>
+<li><strong>Spin.</strong> Press <strong>Spin</strong> (or the Space bar) and a topic is chosen at random. Don't like it? Spin again before you start.</li>
+<li><strong>Research.</strong> Press <strong>Start research</strong>. The countdown begins.
+<ul>
+<li>Use the research angles shown as chips. Tick each one off as you cover it.</li>
+<li>Write notes in the notes box: definitions, formulas, a real company, one example.</li>
+<li>You can pause the timer at any point.</li>
+</ul></li>
+<li><strong>Speak.</strong> When research time ends, a beep sounds and the speech timer starts. You can also press <strong>Start speech</strong> early if you feel ready. Speak out loud, using your notes if you need them.</li>
+<li><strong>Finish.</strong> Press <strong>I'm done</strong>, or let the timer run out. Ask yourself:
+<ul>
+<li>Did I explain the key terms?</li>
+<li>Did I give one real example?</li>
+<li>Did I end with a clear takeaway?</li>
+</ul></li>
+<li><strong>Go again.</strong> Spin a new topic, or retry the same one and aim to do better.</li>
+</ol>
+<h3>Good to know</h3>
+<ul>
+<li>Topics come only from the five course plans, so everything you practise is exam-relevant.</li>
+<li>Your notes aren't saved. They disappear if you leave or reload the page.</li>
+<li>Speak out loud, not in your head. It works better.</li>
+</ul>
+</section>
 </main>
 <script>
 var S={
