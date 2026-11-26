@@ -58,12 +58,42 @@ textarea::placeholder{color:var(--mut)}
 .howto ol,.howto ul{margin:0 0 10px;padding-left:20px}
 .howto li{margin:6px 0}
 .howto strong{color:var(--ink);font-weight:600}
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(20,12,7,.72);backdrop-filter:blur(8px)}
+.modal.on{display:flex}
+.card{width:min(540px,100%);max-height:90vh;overflow:auto;padding:28px 30px;border:1px solid var(--line);border-radius:24px;background:var(--base);color:var(--ink);text-align:left;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.card h2{font:400 clamp(28px,5vw,38px)/1.1 "Caprasimo",Georgia,serif;margin:0 0 14px}
+.card p{margin:0 0 14px;font-size:15.5px;line-height:1.55;color:var(--ink)}
+.card a{color:var(--acc);text-decoration:underline;text-underline-offset:3px}
+.card details{margin:14px 0 22px;color:var(--mut);font-size:14.5px}
+.card summary{cursor:pointer;user-select:none;font-weight:500;color:var(--mut)}
+.card ol{margin:10px 0 0;padding-left:20px;line-height:1.6}
+.card li{margin:3px 0}
+.card .btn.pri{padding:13px 28px;font-size:16px}
 @media(min-width:768px){main{padding:36px 48px 40px}h1{font-size:clamp(40px,4.5vw,56px)}.by{font-size:17px;margin:6px 0 28px}.pill{font-size:16px;padding:11px 22px}.desc{max-width:560px;font-size:17px;margin:16px auto 0}.stage{margin:clamp(28px,6vh,52px) auto 0;min-height:320px}.eye{font-size:14px}.md{font-size:clamp(32px,5vw,48px)}.sm{font-size:clamp(25px,3.6vw,34px)}.where{font-size:17px}.btn{font-size:18px;padding:17px 36px}.gear{width:58px;height:58px;padding:0;font-size:22px}.chips{max-width:760px}.chips label{font-size:16px;padding:10px 18px}textarea{width:min(760px,100%);min-height:130px;font-size:16px}.hint{font-size:14px;margin-top:28px}}
 button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
+<div class="modal on" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-t">
+<div class="card">
+<h2 id="intro-t">Tired? Same.</h2>
+<p>Trimester II is a lot. Finals are coming, SIP prep is stacking up, and most of us are running on fumes. This is a small thing to make practice feel lighter.</p>
+<p>I found the idea on <a href="https://unprompted.co" target="_blank" rel="noopener">Unprompted</a>, a speaking-practice site, and rebuilt it for our Trimester II courses (AMM, MHR, FM, BAAI and OM) to help us with SIP prep and finals.</p>
+<p>Ten minutes a day is enough. Spin a topic, research it, speak on it. Then go rest.</p>
+<details open>
+<summary>How to play</summary>
+<ol>
+<li>Pick a subject, or Random.</li>
+<li>Press Spin to get a topic.</li>
+<li>Research it on the timer. Tick the angles and jot notes.</li>
+<li>Start the speech timer and speak out loud.</li>
+<li>Check yourself: key terms, one real example, a clear takeaway.</li>
+</ol>
+</details>
+<button class="btn pri" id="go">Let’s go</button>
+</div>
+</div>
 <main>
 <h1>Deep Research</h1>
 <p class="by">MBA · Trimester II · AMM, MHR, FM, BAAI, OM</p>
@@ -171,7 +201,11 @@ function speak(){clearInterval(timer);
 out('<p class="eye">Speak now</p><div class="clock" id="ck"></div><div class="bar"><i id="br"></i></div><h2 class="topic sm" style="margin-top:24px">'+cur.t+'</h2><textarea id="nt" aria-label="Your notes" placeholder="Your notes">'+esc(notes)+'</textarea><div class="acts"><button class="btn pri" id="pri">I’m done</button><button class="btn" id="pz">Pause</button></div>');
 $("nt").oninput=function(){notes=this.value};pauseBtn();$("pri").onclick=finish;run(sM*60,finish)}
 function finish(){clearInterval(timer);out('<p class="eye">Well done</p><h2 class="topic md">'+cur.t+'</h2>'+where()+'<p class="desc">Did you define the key terms, give one real example, and end with a clear takeaway?</p><div class="acts"><button class="btn pri" id="pri">Spin another</button><button class="btn" id="rp">Retry this topic</button></div>');$("pri").onclick=spin;$("rp").onclick=showTopic}
-document.addEventListener("keydown",function(e){if(e.code==="Space"&&!/TEXTAREA|BUTTON|INPUT/.test(e.target.tagName)){e.preventDefault();var p=$("pri");if(p)p.click()}});
+var intro=$("intro");
+function closeIntro(){if(intro)intro.classList.remove("on")}
+if($("go"))$("go").onclick=closeIntro;
+if(intro)intro.onclick=function(e){if(e.target===intro)closeIntro()};
+document.addEventListener("keydown",function(e){if(intro&&intro.classList.contains("on")){if(e.key==="Escape")closeIntro();return}if(e.code==="Space"&&!/TEXTAREA|BUTTON|INPUT/.test(e.target.tagName)){e.preventDefault();var p=$("pri");if(p)p.click()}});
 drawSubj();
 var rOpts=[2,3,5,10],sOpts=[1,2,3,5];
 drawTimes("rs",rOpts,rM,function(m){rM=m;if(cur&&left===1)showTopic();else if(!cur)idle()});
